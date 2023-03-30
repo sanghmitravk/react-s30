@@ -1,7 +1,28 @@
 .List {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .ListItem {
+    text-align: center;
+
+    .ListItemName {
+      padding: 0.5rem 0;
+    }
+    .ListItemEmail {
+      padding: 0.5rem 0;
+    }
+  }
 
   button {
-    background-color: purple;
+    background-color: transparent;
+    border: 1px solid grey;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
   }
 }

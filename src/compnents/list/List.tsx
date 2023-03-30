@@ -32,18 +32,18 @@ const List = () => {
     return (
         <div className='List'>
             {data ? (
-                <div>
+                <>
                     {
 
                         data.map((item: ListTypes.IList, index) => {
                             const { name: { title, first, last }, email } = item || {};
-                            return <div key={index}>
-                                <div>{title} {first} {last}</div>
-                                <div>{email}</div>
+                            return <div key={index} className="ListItem">
+                                <div className='ListItemName'>{title} {first} {last}</div>
+                                <div className='ListItemEmail'>{email}</div>
                             </div>
                         })}
-                    <button onClick={handleClick}>Refresh</button>
-                </div>
+                    <button onClick={handleClick} title="Click here If you want to change the value">Refresh</button>
+                </>
             ) : (
                 <p>Loading...</p>
             )}
